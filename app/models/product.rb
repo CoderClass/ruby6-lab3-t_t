@@ -7,4 +7,9 @@ class Product < ActiveRecord::Base
   def set_default_image_path
     self.image_path ||= "http://lorempixel.com/200/200/fashion"
   end
+
+  # milestone 4
+  def self.alphabetical
+    Product.order(:name)
+  end
 end
